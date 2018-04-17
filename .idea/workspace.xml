@@ -42,8 +42,8 @@
       <file leaf-file-name="login_test.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login_test.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="83" lean-forward="true" selection-start-line="12" selection-start-column="83" selection-end-line="12" selection-end-column="83" />
+            <state relative-caret-position="170">
+              <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -92,7 +92,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="142" />
     <option name="y" value="6" />
     <option name="width" value="1400" />
@@ -226,44 +226,44 @@
       <updated>1523830234113</updated>
       <workItem from="1523830254821" duration="273000" />
       <workItem from="1523903756280" duration="5840000" />
-      <workItem from="1524003023630" duration="2037000" />
+      <workItem from="1524003023630" duration="3685000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="login_test - 2018.04.18 at 00h 35m 22s.xml">
+    <history-entry file="login_test - 2018.04.18 at 00h 44m 38s.xml">
       <configuration name="login_test" configurationId="KotlinJavaScriptTestRunnerProtractor" />
     </history-entry>
-    <history-entry file="login_test - 2018.04.18 at 00h 35m 43s.xml">
+    <history-entry file="login_test - 2018.04.18 at 00h 45m 04s.xml">
       <configuration name="login_test" configurationId="KotlinJavaScriptTestRunnerProtractor" />
     </history-entry>
-    <history-entry file="login_test - 2018.04.18 at 00h 36m 23s.xml">
+    <history-entry file="login_test - 2018.04.18 at 00h 46m 13s.xml">
       <configuration name="login_test" configurationId="KotlinJavaScriptTestRunnerProtractor" />
     </history-entry>
-    <history-entry file="login_test - 2018.04.18 at 00h 37m 14s.xml">
+    <history-entry file="login_test - 2018.04.18 at 00h 47m 07s.xml">
       <configuration name="login_test" configurationId="KotlinJavaScriptTestRunnerProtractor" />
     </history-entry>
-    <history-entry file="login_test - 2018.04.18 at 00h 37m 33s.xml">
+    <history-entry file="login_test - 2018.04.18 at 00h 58m 12s.xml">
       <configuration name="login_test" configurationId="KotlinJavaScriptTestRunnerProtractor" />
     </history-entry>
-    <history-entry file="login_test - 2018.04.18 at 00h 40m 46s.xml">
+    <history-entry file="login_test - 2018.04.18 at 00h 59m 25s.xml">
       <configuration name="login_test" configurationId="KotlinJavaScriptTestRunnerProtractor" />
     </history-entry>
-    <history-entry file="login_test - 2018.04.18 at 00h 41m 41s.xml">
+    <history-entry file="login_test - 2018.04.18 at 01h 00m 59s.xml">
       <configuration name="login_test" configurationId="KotlinJavaScriptTestRunnerProtractor" />
     </history-entry>
-    <history-entry file="login_test - 2018.04.18 at 00h 42m 18s.xml">
+    <history-entry file="login_test - 2018.04.18 at 01h 03m 07s.xml">
       <configuration name="login_test" configurationId="KotlinJavaScriptTestRunnerProtractor" />
     </history-entry>
-    <history-entry file="login_test - 2018.04.18 at 00h 42m 36s.xml">
+    <history-entry file="login_test - 2018.04.18 at 01h 04m 24s.xml">
       <configuration name="login_test" configurationId="KotlinJavaScriptTestRunnerProtractor" />
     </history-entry>
-    <history-entry file="login_test - 2018.04.18 at 00h 43m 01s.xml">
+    <history-entry file="login_test - 2018.04.18 at 01h 07m 33s.xml">
       <configuration name="login_test" configurationId="KotlinJavaScriptTestRunnerProtractor" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8150000" />
+    <option name="totallyTimeSpent" value="9798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -365,8 +365,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login_test.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="83" lean-forward="true" selection-start-line="12" selection-start-column="83" selection-end-line="12" selection-end-column="83" />
+        <state relative-caret-position="170">
+          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
         </state>
       </provider>
     </entry>

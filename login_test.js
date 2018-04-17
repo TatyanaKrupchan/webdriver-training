@@ -39,7 +39,7 @@ var protractor_1 = require("protractor");
 describe('Simple webdriver test', function () {
     it('should open google search page', function () {
         return __awaiter(this, void 0, void 0, function () {
-            var adminLogin, adminPassword, usernameByCss, loginField, passwordField, rememberMeIsChecked;
+            var adminLogin, adminPassword, usernameByCss, rememberMeIsChecked;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -53,36 +53,52 @@ describe('Simple webdriver test', function () {
                         _a.sent();
                         console.log('Admin page opened');
                         usernameByCss = '[name="username"]';
-                        return [4 /*yield*/, protractor_1.browser.wait(protractor_1.ExpectedConditions.visibilityOf(protractor_1.browser.$(usernameByCss)))];
+                        return [4 /*yield*/, protractor_1.browser.wait(protractor_1.ExpectedConditions.visibilityOf(protractor_1.browser.$('[name="login_form"]')), 5)];
                     case 3:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.findElement(by.css(usernameByCss)).sendKeys(adminLogin)];
+                        return [4 /*yield*/, protractor_1.browser.$(usernameByCss).isPresent()];
                     case 4:
-                        loginField = _a.sent();
-                        // let loginField = await browser.findElement(by.css('[name="username"]')).sendKeys(adminLogin);
-                        console.log("Login \"" + adminLogin + "\" inserted");
-                        return [4 /*yield*/, protractor_1.browser.$('[name="password"]').sendKeys(adminPassword)];
+                        if (!_a.sent()) return [3 /*break*/, 6];
+                        return [4 /*yield*/, protractor_1.browser.findElement(by.css(usernameByCss)).sendKeys(adminLogin)];
                     case 5:
-                        passwordField = _a.sent();
-                        console.log("Password \"" + adminPassword + "\" inserted");
-                        return [4 /*yield*/, protractor_1.browser.$('[name="remember_me"]').isSelected()];
-                    case 6:
-                        rememberMeIsChecked = _a.sent();
-                        console.log("Remember Me checkbox is selected: " + rememberMeIsChecked);
-                        if (!rememberMeIsChecked) return [3 /*break*/, 8];
-                        return [4 /*yield*/, protractor_1.browser.$('[name="remember_me"]').click()];
-                    case 7:
                         _a.sent();
-                        _a.label = 8;
-                    case 8: return [4 /*yield*/, protractor_1.browser.$('[name="login"]').click()];
+                        console.log("Username \"" + adminLogin + "\" inserted");
+                        return [3 /*break*/, 7];
+                    case 6:
+                        console.log("Username field is not present in the screen");
+                        _a.label = 7;
+                    case 7: return [4 /*yield*/, protractor_1.browser.$('[name="password"]').isPresent()];
+                    case 8:
+                        if (!_a.sent()) return [3 /*break*/, 10];
+                        return [4 /*yield*/, protractor_1.browser.$('[name="password"]').sendKeys(adminPassword)];
                     case 9:
                         _a.sent();
-                        return [4 /*yield*/, protractor_1.browser.wait(protractor_1.ExpectedConditions.visibilityOf(protractor_1.browser.$('[title="My Store"]')))];
+                        console.log("Password \"" + adminPassword + "\" inserted");
+                        return [3 /*break*/, 11];
                     case 10:
+                        console.log("Password field is not present in the screen");
+                        _a.label = 11;
+                    case 11: return [4 /*yield*/, protractor_1.browser.$('[name="remember_me"]').isPresent()];
+                    case 12:
+                        if (!_a.sent()) return [3 /*break*/, 15];
+                        return [4 /*yield*/, protractor_1.browser.$('[name="remember_me"]').isSelected()];
+                    case 13:
+                        rememberMeIsChecked = _a.sent();
+                        console.log("Remember Me checkbox is selected: " + rememberMeIsChecked);
+                        if (!rememberMeIsChecked) return [3 /*break*/, 15];
+                        return [4 /*yield*/, protractor_1.browser.$('[name="remember_me"]').click()];
+                    case 14:
+                        _a.sent();
+                        _a.label = 15;
+                    case 15: return [4 /*yield*/, protractor_1.browser.$('[name="login"]').click()];
+                    case 16:
+                        _a.sent();
+                        return [4 /*yield*/, protractor_1.browser.wait(protractor_1.ExpectedConditions.visibilityOf(protractor_1.browser.$('[title="My Store"]')))];
+                    case 17:
                         _a.sent();
                         console.log("Admin was able to log in. Quitting the browser.");
                         return [4 /*yield*/, protractor_1.browser.quit()];
-                    case 11:
+                    case 18:
                         _a.sent();
                         return [2 /*return*/];
                 }
