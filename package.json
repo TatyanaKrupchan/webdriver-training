@@ -2,7 +2,12 @@
   "name": "webdriver-training",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "webdriver-update": "webdriver-manager update"
+  },
   "dependencies": {
+    "@types/jasmine": "^2.8.8",
+    "@types/node": "^10.5.2",
     "chromedriver": "^2.37.0",
     "protractor": "^5.3.1",
     "selenium": "^2.20.0",
