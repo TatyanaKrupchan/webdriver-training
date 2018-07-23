@@ -36,6 +36,57 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var protractor_1 = require("protractor");
+function fillField(element, text) {
+    return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, element.sendKeys(text)];
+                case 1:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.fillField = fillField;
+function selectElementFromList(cssElement, cssOption, elementToSelect) {
+    return __awaiter(this, void 0, void 0, function () {
+        var fieldElement, optionItems;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    fieldElement = protractor_1.browser.$(cssElement);
+                    return [4 /*yield*/, fieldElement.click()];
+                case 1:
+                    _a.sent();
+                    return [4 /*yield*/, fieldElement.$$(cssOption).asElementFinders_()];
+                case 2:
+                    optionItems = _a.sent();
+                    return [4 /*yield*/, optionItems[elementToSelect].click()];
+                case 3:
+                    _a.sent();
+                    return [2 /*return*/];
+            }
+        });
+    });
+}
+exports.selectElementFromList = selectElementFromList;
+function generateText(length, type) {
+    return __awaiter(this, void 0, void 0, function () {
+        var text, possible, i;
+        return __generator(this, function (_a) {
+            text = "";
+            possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            if (type === 'OnlyNumbers') {
+                possible = "0123456789";
+            }
+            for (i = 0; i < length; i++)
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            return [2 /*return*/, text];
+        });
+    });
+}
+exports.generateText = generateText;
 function loginToApp(login, password) {
     return __awaiter(this, void 0, void 0, function () {
         var usernameByCss, rememberMeIsChecked;

@@ -1,4 +1,26 @@
-import { browser, ExpectedConditions} from "protractor";
+import { browser, ElementFinder, ExpectedConditions } from "protractor";
+
+export async function fillField(element: ElementFinder, text: string) {
+    await element.sendKeys(text);
+}
+
+export async function selectElementFromList(cssElement: string, cssOption: string, elementToSelect: number) {
+    let fieldElement: ElementFinder = browser.$(cssElement);
+    await fieldElement.click();
+    let optionItems: ElementFinder[] = await fieldElement.$$(cssOption).asElementFinders_();
+    await optionItems[elementToSelect].click();
+}
+
+export async function generateText(length: number, type?: string): Promise<string> {
+    let text = "";
+    let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    if (type === 'OnlyNumbers') { possible = "0123456789"; }
+
+    for (var i = 0; i < length; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+}
 
 export async function loginToApp(login: string, password: string) {
     const usernameByCss = '[name="username"]';
@@ -29,3 +51,5 @@ export async function loginToApp(login: string, password: string) {
     await browser.wait(ExpectedConditions.visibilityOf(browser.$('[title="My Store"]')));
     console.log(`Admin was able to log in.`)
 }
+
+
