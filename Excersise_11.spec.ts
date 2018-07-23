@@ -43,20 +43,20 @@ describe('Excersise 11', function () {
         let password: string = `${await generateText(20)}`;
         console.log(`${email}, ${password}`);
 
-        await fillField(await formToFill.$(firstNameFieldCss), firstName);
-        await fillField(await formToFill.$(lastNameFieldCss), lastName);
-        await fillField(await formToFill.$(address1FieldCss), address1);
-        await fillField(await formToFill.$(cityFieldCss), city);
-        await fillField(await formToFill.$(postcodeFieldCss), postcode);
-        await fillField(await formToFill.$(emailFieldCss), email);
-        await fillField(await formToFill.$(phoneFieldCss), phone);
-        await fillField(await formToFill.$(confPasswordFieldCss), password);
-        await fillField(await formToFill.$(passwordFieldCss), password);
+        await fillField(formToFill.$(firstNameFieldCss), firstName);
+        await fillField(formToFill.$(lastNameFieldCss), lastName);
+        await fillField(formToFill.$(address1FieldCss), address1);
+        await fillField(formToFill.$(cityFieldCss), city);
+        await fillField(formToFill.$(postcodeFieldCss), postcode);
+        await fillField(formToFill.$(emailFieldCss), email);
+        await fillField(formToFill.$(phoneFieldCss), phone);
+        await fillField(formToFill.$(confPasswordFieldCss), password);
+        await fillField(formToFill.$(passwordFieldCss), password);
         const countryFieldCss = 'b';
 
         let countryFieldElement: ElementFinder = formToFill.$('.select2-selection.select2-selection--single')
         await countryFieldElement.$(countryFieldCss).click();
-        await fillField(await browser.$('input.select2-search__field'), country);
+        await fillField(browser.$('input.select2-search__field'), country);
         await browser.$('input.select2-search__field').sendKeys(Key.ENTER, Key.TAB);
         
         const stateFiledCss = 'select[name="zone_code"]';
@@ -75,7 +75,6 @@ describe('Excersise 11', function () {
         await browser.wait(ExpectedConditions.visibilityOf(browser.$('aside #box-account')), 5000);
         await logout();
 
-        await browser.sleep(2000);
         await browser.quit()
     });
 

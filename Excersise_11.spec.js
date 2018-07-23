@@ -41,9 +41,9 @@ describe('Excersise 11', function () {
     var usernameByCss = '[name="username"]';
     it('should create new user and login', function () {
         return __awaiter(this, void 0, void 0, function () {
-            var appLink, createNewUserLinkCss, createAccountPageTitle, createAccountPageTitleCss, customerFormCss, country, _a, fieldsToFill, formToFill, firstNameFieldCss, lastNameFieldCss, address1FieldCss, cityFieldCss, postcodeFieldCss, emailFieldCss, phoneFieldCss, passwordFieldCss, confPasswordFieldCss, createAccountButtonCss, firstName, _b, lastName, _c, address1, _d, _e, city, _f, postcode, _g, email, _h, _j, phone, _k, password, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, countryFieldCss, countryFieldElement, _w, stateFiledCss, stateElement, stateItemElement, stateItemNumber, _x, _y, _z;
-            return __generator(this, function (_0) {
-                switch (_0.label) {
+            var appLink, createNewUserLinkCss, createAccountPageTitle, createAccountPageTitleCss, customerFormCss, country, _a, fieldsToFill, formToFill, firstNameFieldCss, lastNameFieldCss, address1FieldCss, cityFieldCss, postcodeFieldCss, emailFieldCss, phoneFieldCss, passwordFieldCss, confPasswordFieldCss, createAccountButtonCss, firstName, _b, lastName, _c, address1, _d, _e, city, _f, postcode, _g, email, _h, _j, phone, _k, password, _l, countryFieldCss, countryFieldElement, stateFiledCss, stateElement, stateItemElement, stateItemNumber, _m, _o, _p;
+            return __generator(this, function (_q) {
+                switch (_q.label) {
                     case 0:
                         appLink = 'http://localhost/litecart/';
                         createNewUserLinkCss = '[name="login_form"]';
@@ -53,25 +53,25 @@ describe('Excersise 11', function () {
                         country = 'united states';
                         return [4 /*yield*/, protractor_1.browser.waitForAngularEnabled(false)];
                     case 1:
-                        _0.sent();
+                        _q.sent();
                         return [4 /*yield*/, protractor_1.browser.get(appLink)];
                     case 2:
-                        _0.sent();
+                        _q.sent();
                         console.log('Main Page opened');
                         return [4 /*yield*/, protractor_1.browser.$(createNewUserLinkCss).$('tr:last-child').click()];
                     case 3:
-                        _0.sent();
+                        _q.sent();
                         _a = expect;
                         return [4 /*yield*/, protractor_1.browser.$(createAccountPageTitleCss).getText()];
                     case 4:
-                        _a.apply(void 0, [_0.sent()]).toBe(createAccountPageTitle, "Incorrect page opened");
+                        _a.apply(void 0, [_q.sent()]).toBe(createAccountPageTitle, "Incorrect page opened");
                         console.log("Open page to create new account: DONE");
                         return [4 /*yield*/, protractor_1.browser.$(customerFormCss).$$('td').asElementFinders_()];
                     case 5:
-                        fieldsToFill = _0.sent();
+                        fieldsToFill = _q.sent();
                         return [4 /*yield*/, protractor_1.browser.$(customerFormCss)];
                     case 6:
-                        formToFill = _0.sent();
+                        formToFill = _q.sent();
                         console.log("Elements To Fill collected");
                         firstNameFieldCss = '[name="firstname"]';
                         lastNameFieldCss = '[name="lastname"]';
@@ -86,148 +86,128 @@ describe('Excersise 11', function () {
                         _b = "FN_";
                         return [4 /*yield*/, helper_1.generateText(8)];
                     case 7:
-                        firstName = _b + (_0.sent());
+                        firstName = _b + (_q.sent());
                         _c = "LN_";
                         return [4 /*yield*/, helper_1.generateText(12)];
                     case 8:
-                        lastName = _c + (_0.sent());
+                        lastName = _c + (_q.sent());
                         _d = "A1_";
                         return [4 /*yield*/, helper_1.generateText(8)];
                     case 9:
-                        _e = _d + (_0.sent()) + " ";
+                        _e = _d + (_q.sent()) + " ";
                         return [4 /*yield*/, helper_1.generateText(2, 'OnlyNumbers')];
                     case 10:
-                        address1 = _e + (_0.sent());
+                        address1 = _e + (_q.sent());
                         _f = "C_";
                         return [4 /*yield*/, helper_1.generateText(12)];
                     case 11:
-                        city = _f + (_0.sent());
+                        city = _f + (_q.sent());
                         _g = "";
                         return [4 /*yield*/, helper_1.generateText(5, 'OnlyNumbers')];
                     case 12:
-                        postcode = _g + (_0.sent());
+                        postcode = _g + (_q.sent());
                         _h = firstName + "." + lastName + "@";
                         return [4 /*yield*/, helper_1.generateText(10)];
                     case 13:
-                        _j = _h + (_0.sent()) + ".";
+                        _j = _h + (_q.sent()) + ".";
                         return [4 /*yield*/, helper_1.generateText(3)];
                     case 14:
-                        email = _j + (_0.sent());
+                        email = _j + (_q.sent());
                         _k = "1";
                         return [4 /*yield*/, helper_1.generateText(8, 'OnlyNumbers')];
                     case 15:
-                        phone = _k + (_0.sent());
+                        phone = _k + (_q.sent());
                         _l = "";
                         return [4 /*yield*/, helper_1.generateText(20)];
                     case 16:
-                        password = _l + (_0.sent());
+                        password = _l + (_q.sent());
                         console.log(email + ", " + password);
-                        _m = helper_1.fillField;
-                        return [4 /*yield*/, formToFill.$(firstNameFieldCss)];
-                    case 17: return [4 /*yield*/, _m.apply(void 0, [_0.sent(), firstName])];
+                        return [4 /*yield*/, helper_1.fillField(formToFill.$(firstNameFieldCss), firstName)];
+                    case 17:
+                        _q.sent();
+                        return [4 /*yield*/, helper_1.fillField(formToFill.$(lastNameFieldCss), lastName)];
                     case 18:
-                        _0.sent();
-                        _o = helper_1.fillField;
-                        return [4 /*yield*/, formToFill.$(lastNameFieldCss)];
-                    case 19: return [4 /*yield*/, _o.apply(void 0, [_0.sent(), lastName])];
+                        _q.sent();
+                        return [4 /*yield*/, helper_1.fillField(formToFill.$(address1FieldCss), address1)];
+                    case 19:
+                        _q.sent();
+                        return [4 /*yield*/, helper_1.fillField(formToFill.$(cityFieldCss), city)];
                     case 20:
-                        _0.sent();
-                        _p = helper_1.fillField;
-                        return [4 /*yield*/, formToFill.$(address1FieldCss)];
-                    case 21: return [4 /*yield*/, _p.apply(void 0, [_0.sent(), address1])];
+                        _q.sent();
+                        return [4 /*yield*/, helper_1.fillField(formToFill.$(postcodeFieldCss), postcode)];
+                    case 21:
+                        _q.sent();
+                        return [4 /*yield*/, helper_1.fillField(formToFill.$(emailFieldCss), email)];
                     case 22:
-                        _0.sent();
-                        _q = helper_1.fillField;
-                        return [4 /*yield*/, formToFill.$(cityFieldCss)];
-                    case 23: return [4 /*yield*/, _q.apply(void 0, [_0.sent(), city])];
+                        _q.sent();
+                        return [4 /*yield*/, helper_1.fillField(formToFill.$(phoneFieldCss), phone)];
+                    case 23:
+                        _q.sent();
+                        return [4 /*yield*/, helper_1.fillField(formToFill.$(confPasswordFieldCss), password)];
                     case 24:
-                        _0.sent();
-                        _r = helper_1.fillField;
-                        return [4 /*yield*/, formToFill.$(postcodeFieldCss)];
-                    case 25: return [4 /*yield*/, _r.apply(void 0, [_0.sent(), postcode])];
-                    case 26:
-                        _0.sent();
-                        _s = helper_1.fillField;
-                        return [4 /*yield*/, formToFill.$(emailFieldCss)];
-                    case 27: return [4 /*yield*/, _s.apply(void 0, [_0.sent(), email])];
-                    case 28:
-                        _0.sent();
-                        _t = helper_1.fillField;
-                        return [4 /*yield*/, formToFill.$(phoneFieldCss)];
-                    case 29: return [4 /*yield*/, _t.apply(void 0, [_0.sent(), phone])];
-                    case 30:
-                        _0.sent();
-                        _u = helper_1.fillField;
-                        return [4 /*yield*/, formToFill.$(confPasswordFieldCss)];
-                    case 31: return [4 /*yield*/, _u.apply(void 0, [_0.sent(), password])];
-                    case 32:
-                        _0.sent();
-                        _v = helper_1.fillField;
-                        return [4 /*yield*/, formToFill.$(passwordFieldCss)];
-                    case 33: return [4 /*yield*/, _v.apply(void 0, [_0.sent(), password])];
-                    case 34:
-                        _0.sent();
+                        _q.sent();
+                        return [4 /*yield*/, helper_1.fillField(formToFill.$(passwordFieldCss), password)];
+                    case 25:
+                        _q.sent();
                         countryFieldCss = 'b';
                         countryFieldElement = formToFill.$('.select2-selection.select2-selection--single');
                         return [4 /*yield*/, countryFieldElement.$(countryFieldCss).click()];
-                    case 35:
-                        _0.sent();
-                        _w = helper_1.fillField;
-                        return [4 /*yield*/, protractor_1.browser.$('input.select2-search__field')];
-                    case 36: return [4 /*yield*/, _w.apply(void 0, [_0.sent(), country])];
-                    case 37:
-                        _0.sent();
+                    case 26:
+                        _q.sent();
+                        return [4 /*yield*/, helper_1.fillField(protractor_1.browser.$('input.select2-search__field'), country)];
+                    case 27:
+                        _q.sent();
                         return [4 /*yield*/, protractor_1.browser.$('input.select2-search__field').sendKeys(protractor_1.Key.ENTER, protractor_1.Key.TAB)];
-                    case 38:
-                        _0.sent();
-                        return [4 /*yield*/, protractor_1.browser.sleep(2000)];
-                    case 39:
-                        _0.sent();
+                    case 28:
+                        _q.sent();
+                        return [4 /*yield*/, protractor_1.browser.sleep(70)];
+                    case 29:
+                        _q.sent();
                         stateFiledCss = 'select[name="zone_code"]';
                         stateElement = formToFill.$(stateFiledCss);
                         return [4 /*yield*/, protractor_1.browser.executeScript("arguments[0].click();", stateElement)];
-                    case 40:
-                        _0.sent();
+                    case 30:
+                        _q.sent();
                         return [4 /*yield*/, stateElement.$$('option').asElementFinders_()];
-                    case 41:
-                        stateItemElement = _0.sent();
+                    case 31:
+                        stateItemElement = _q.sent();
                         return [4 /*yield*/, helper_1.generateText(2, 'OnlyNumbers')];
-                    case 42:
-                        stateItemNumber = +(_0.sent());
+                    case 32:
+                        stateItemNumber = +(_q.sent());
                         if (stateItemNumber > 50) {
                             stateItemNumber = stateItemNumber - 50;
                         }
                         ;
                         return [4 /*yield*/, stateItemElement[stateItemNumber].click()];
-                    case 43:
-                        _0.sent();
-                        _y = (_x = console).log;
-                        _z = "State number = " + stateItemNumber + ", state name = '";
+                    case 33:
+                        _q.sent();
+                        _o = (_m = console).log;
+                        _p = "State number = " + stateItemNumber + ", state name = '";
                         return [4 /*yield*/, stateItemElement[stateItemNumber].getText()];
-                    case 44:
-                        _y.apply(_x, [_z + (_0.sent()) + "'"]);
+                    case 34:
+                        _o.apply(_m, [_p + (_q.sent()) + "'"]);
                         return [4 /*yield*/, formToFill.$(createAccountButtonCss).click()];
-                    case 45:
-                        _0.sent();
+                    case 35:
+                        _q.sent();
                         return [4 /*yield*/, logout()];
-                    case 46:
-                        _0.sent();
+                    case 36:
+                        _q.sent();
                         return [4 /*yield*/, login(email, password)];
-                    case 47:
-                        _0.sent();
+                    case 37:
+                        _q.sent();
                         console.log("Logged in again");
                         return [4 /*yield*/, protractor_1.browser.wait(protractor_1.ExpectedConditions.visibilityOf(protractor_1.browser.$('aside #box-account')), 5000)];
-                    case 48:
-                        _0.sent();
+                    case 38:
+                        _q.sent();
                         return [4 /*yield*/, logout()];
-                    case 49:
-                        _0.sent();
+                    case 39:
+                        _q.sent();
                         return [4 /*yield*/, protractor_1.browser.sleep(2000)];
-                    case 50:
-                        _0.sent();
+                    case 40:
+                        _q.sent();
                         return [4 /*yield*/, protractor_1.browser.quit()];
-                    case 51:
-                        _0.sent();
+                    case 41:
+                        _q.sent();
                         return [2 /*return*/];
                 }
             });
