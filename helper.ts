@@ -26,7 +26,7 @@ export async function loginToApp(login: string, password: string) {
     const usernameByCss = '[name="username"]';
     await browser.wait(ExpectedConditions.visibilityOf(browser.$('[name="login_form"]')), 5);
     if (await browser.$(usernameByCss).isPresent()) {
-        await browser.findElement(by.css(usernameByCss)).sendKeys(login);
+        await browser.$(usernameByCss).sendKeys(login);
         console.log(`Username "${login}" inserted`)
     }
     else console.log(`Username field is not present in the screen`)

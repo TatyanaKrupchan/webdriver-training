@@ -100,7 +100,7 @@ function loginToApp(login, password) {
                     return [4 /*yield*/, protractor_1.browser.$(usernameByCss).isPresent()];
                 case 2:
                     if (!_a.sent()) return [3 /*break*/, 4];
-                    return [4 /*yield*/, protractor_1.browser.findElement(by.css(usernameByCss)).sendKeys(login)];
+                    return [4 /*yield*/, protractor_1.browser.$(usernameByCss).sendKeys(login)];
                 case 3:
                     _a.sent();
                     console.log("Username \"" + login + "\" inserted");
