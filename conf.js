@@ -3,15 +3,17 @@ exports.config = {
   directConnect: false,
 
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['Excersise_7.spec.js'],
+  specs: ['Excersise_17.spec.js'],
 
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
+    "loggingPrefs": { "driver": "INFO", "server": "OFF", "browser": "ALL" }
     // 'browserName': 'firefox'
-    /*'browserName': 'internet explorer',
+    /* 'browserName': 'internet explorer',
     'platform': 'ANY',
     'ignoreProtectedModeSettings': true*/
+
   },
 
   // Framework to use. Jasmine is recommended.
